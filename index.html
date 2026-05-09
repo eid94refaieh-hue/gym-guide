@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل أجهزة الجيم</title>
+    
+    <!-- أيقونة الصفحة (Favicon) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+    
+    <!-- أيقونة خاصة بأجهزة أبل عند الحفظ للشاشة الرئيسية -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+    
+    <!-- جعل الصفحة قابلة للتثبيت كتطبيق -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItiv2KfZhNmF2YTZgSDYp9mE2KzZhdmF2K8iLAogICJzaG9ydF9uYW1lIjogItiv2KfZhNmF2YTYgSIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgInRoZW1lX2NvbG9yIjogIiNFNDgxMUUiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz48dGV4dCB5PScuOWVtJyBmb250LXNpemU9JzkwJz7wn4+777iPPC90ZXh0Pjwvc3ZnPiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0=">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E4811E;
+            --bg: #FFFFFF;
+            --text: #202020;
+            --accent: #E1AB2A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            font-weight: 400;
+            background-color: #f8f8f8;
+            color: var(--text);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            direction: rtl;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            background: var(--bg);
+            padding: 1.5rem 1rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .header h1 {
+            font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            color: var(--primary);
+            letter-spacing: 0.5px;
+        }
+
+        .header .eng-title {
+            font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        .hadith {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px dashed var(--accent);
+        }
+
+        .guide-note {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color: var(--text);
+            gap: 0.5rem;
+        }
+
+        .print-btn {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--bg);
+            background: var(--primary);
+            border: none;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .print-btn:hover {
+            opacity: 0.85;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            white-space: nowrap;
+            font-size: 0.8rem;
+            min-width: 800px;
+        }
+
+        th {
+            font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
+            font-weight: 600;
+            padding: 0.7rem 0.4rem;
+            text-align: center;
+            border-bottom: 2px solid var(--text);
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        td {
+            padding: 0.6rem 0.4rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        tr:hover td {
+            background: #fff8f0;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .machine-link {
+            color: var(--primary);
+        }
+
+        .muscle-link {
+            color: var(--accent);
+        }
+
+        .video-link {
+            color: var(--primary);
+        }
+
+        .alt-link {
+            color: var(--accent);
+        }
+
+        .eng-text {
+            font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .footer a {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { max-width: 100%; padding: 0.4cm; }
+            .print-btn, .guide-note { display: none !important; }
+            a { color: inherit; }
+            .machine-link, .muscle-link, .video-link, .alt-link { color: inherit; }
+            th { color: black; border-bottom: 2px solid black; }
+            td { border-bottom: 1px solid black; color: black; }
+            .eng-text { color: black; }
+            .header { border-bottom: 2px solid black; }
+            .footer { border-top: 2px solid black; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>دليل أجهزة الجيم</h1>
+            <div class="eng-title">GYM EQUIPMENT GUIDE</div>
+        </div>
+        <div class="hadith">
+            قال رسول الله ﷺ: "المؤمن القوي خير وأحب إلى الله من المؤمن الضعيف"
+        </div>
+
+        <div class="guide-note">
+            <span>📷 اسم الآلة = صورة</span>
+            <span>▶️ فيديو يوتيوب</span>
+            <span>🧠 العضلة = شكلها</span>
+            <button class="print-btn" onclick="window.print()">🖨️ طباعة</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>اسم الآلة</th>
+                        <th>العضلة المستهدفة</th>
+                        <th>فيديو يوتيوب</th>
+                        <th>بديل بوزن الجسم</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Lat+Pulldown+machine" target="_blank">جهاز سحب عالي / Lat Pulldown</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=latissimus+dorsi+muscle+anatomy" target="_blank">الظهر العريض / Lats</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Lat+Pulldown+form+shorts" target="_blank">Lat Pulldown</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Pull+ups+shorts" target="_blank">Pull-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Seated+Cable+Row+machine" target="_blank">جهاز سحب أرضي / Low Row</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=middle+back+muscles+anatomy+rhomboids" target="_blank">منتصف الظهر / Middle Back</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Seated+Cable+Row+shorts" target="_blank">Seated Cable Row</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Inverted+Row+shorts" target="_blank">Inverted Row</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Power+Tower+gym+station" target="_blank">باور تاور / Power Tower</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=back+and+abdominal+muscles+anatomy" target="_blank">الظهر والبطن / Back & Abs</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Power+Tower+workout+shorts" target="_blank">Power Tower</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Pull+ups+Leg+Raises+shorts" target="_blank">Pull-ups / Leg Raises</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Leg+Extension+machine" target="_blank">جهاز مد الأرجل / Leg Extension</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=quadriceps+muscle+anatomy" target="_blank">الفخذ الأمامي / Quads</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Leg+Extension+machine+shorts" target="_blank">Leg Extension</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Sissy+Squat+shorts" target="_blank">Sissy Squat</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Leg+Press+machine" target="_blank">مكبس أرجل مائل / Leg Press</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=leg+muscles+anatomy+quadriceps+hamstrings+glutes" target="_blank">الأرجل كاملة / Legs</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Leg+Press+technique+shorts" target="_blank">Leg Press</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Air+Squats+shorts" target="_blank">Air Squats</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Hack+Squat+machine" target="_blank">جهاز هاك سكوات / Hack Squat</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=quadriceps+and+gluteus+maximus+anatomy" target="_blank">الفخذ والأرداف / Quads & Glutes</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Hack+Squat+machine+shorts" target="_blank">Hack Squat</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Wall+Sit+shorts" target="_blank">Wall Sit</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Smith+Machine+gym" target="_blank">جهاز سميث / Smith Machine</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=full+body+muscles+anatomy+chart" target="_blank">تمرين شامل / Compound</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Smith+Machine+Squat+shorts" target="_blank">Smith Machine</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Bodyweight+Squat+shorts" target="_blank">Bodyweight Squat</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Preacher+Curl+Bench" target="_blank">دكة بايسبس / Preacher Curl</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=biceps+brachii+muscle+anatomy" target="_blank">بايسبس / Biceps</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Preacher+Curl+form+shorts" target="_blank">Preacher Curl</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Chin+ups+shorts" target="_blank">Chin-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Flat+Bench+Press" target="_blank">بنش مستوي / Flat Bench</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=pectoralis+major+muscle+anatomy" target="_blank">الصدر / Chest</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Barbell+Bench+Press+shorts" target="_blank">Barbell Bench</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Push+ups+shorts" target="_blank">Push-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Decline+Bench+Press" target="_blank">بنش مائل لأسفل / Decline Bench</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=lower+pectoral+muscles+anatomy" target="_blank">الصدر السفلي / Lower Chest</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Decline+Bench+Press+shorts" target="_blank">Decline Bench</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Decline+Push+ups+shorts" target="_blank">Decline Push-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Adjustable+Bench+gym" target="_blank">بنش تجميع / Adjustable Bench</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=chest+and+shoulder+muscles+anatomy" target="_blank">صدر وأكتاف / Chest & Shoulders</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Dumbbell+Press+shorts" target="_blank">Dumbbell Press</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Incline+Push+ups+shorts" target="_blank">Incline Push-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Shoulder+Press+Bench" target="_blank">بنش الأكتاف / Shoulder Press</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=deltoid+muscle+anatomy" target="_blank">الأكتاف / Shoulders</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Seated+Shoulder+Press+shorts" target="_blank">Shoulder Press</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Pike+Push+ups+shorts" target="_blank">Pike Push-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Hyperextension+bench" target="_blank">جهاز القطنية / Hyper Extension</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=lower+back+muscles+anatomy+erector+spinae" target="_blank">أسفل الظهر / Lower Back</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Hyperextension+form+shorts" target="_blank">Hyperextension</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Superman+exercise+shorts" target="_blank">Superman</a></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Sit-up+Board+decline+bench" target="_blank">بنش البطن المائل / Sit-up Board</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=abdominal+muscles+anatomy+rectus+abdominis" target="_blank">عضلات البطن / Abs</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Decline+Sit+ups+shorts" target="_blank">Decline Sit-ups</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Plank+Crunches+shorts" target="_blank">Plank / Crunches</a></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Dips+Station+gym" target="_blank">جهاز المتوازي / Dips Station</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=triceps+and+chest+muscles+anatomy" target="_blank">ترايسبس وصدر / Triceps & Chest</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Chest+Dips+form+shorts" target="_blank">Chest Dips</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Bench+Dips+shorts" target="_blank">Bench Dips</a></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=T-Bar+Row+machine" target="_blank">سحب أرضي T / T-Bar Row</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=back+muscles+anatomy+lats+rhomboids" target="_blank">مجنص وعمود فقري / Back</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=T-Bar+Row+exercise+shorts" target="_blank">T-Bar Row</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Floor+Back+Extensions+shorts" target="_blank">Floor Back Ext.</a></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Waist+Twister+exercise+disc" target="_blank">قرص الدوران / Waist Twister</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=oblique+muscles+anatomy" target="_blank">الخصر / Obliques</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Waist+Twister+workout+shorts" target="_blank">Waist Twister</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Russian+Twists+shorts" target="_blank">Russian Twists</a></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Recumbent+Bike+gym" target="_blank">دراجة ثابتة / Recumbent Bike</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=cardio+exercise+muscles+worked" target="_blank">كارديو / Cardio</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Recumbent+Bike+workout+shorts" target="_blank">Recumbent Bike</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Mountain+Climbers+shorts" target="_blank">Mountain Climbers</a></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Air+Walker+elliptical+machine" target="_blank">المشي الهوائي / Air Walker</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=full+body+cardio+muscles" target="_blank">كارديو شامل / Cardio</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Air+Walker+benefits+shorts" target="_blank">Air Walker</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=High+Knees+shorts" target="_blank">High Knees</a></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Dumbbells+set" target="_blank">دمبلز / Dumbbells</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=full+body+muscles+anatomy+chart" target="_blank">عضلات متنوعة / Various</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Dumbbell+full+body+shorts" target="_blank">Dumbbell full body</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Bodyweight+moves+shorts" target="_blank">Bodyweight moves</a></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Olympic+Barbell" target="_blank">بار مستقيم / Barbell</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=full+body+muscles+anatomy+chart" target="_blank">تمرين شامل / Compound</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Barbell+exercises+shorts" target="_blank">Barbell exercises</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Squats+Lunges+shorts" target="_blank">Squats / Lunges</a></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=EZ+Curl+Bar" target="_blank">بار زجزاج / EZ Bar</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=biceps+and+triceps+muscle+anatomy" target="_blank">ذراع (باي/تراي) / Arms</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=EZ+Bar+Curl+shorts" target="_blank">EZ Bar Curl</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Diamond+Push+ups+shorts" target="_blank">Diamond Push-ups</a></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Leg+Raise+Station" target="_blank">رفع الأرجل / Leg Raise Station</a></td>
+                        <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=lower+abdominal+muscles+anatomy" target="_blank">أسفل البطن / Lower Abs</a></td>
+                        <td><a class="video-link" href="https://www.youtube.com/results?search_query=Hanging+Leg+Raises+shorts" target="_blank">Hanging Leg Raises</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Lying+Leg+Raises+shorts" target="_blank">Lying Leg Raises</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <div>
+                تصميم وتنفيذ: <a href="https://wa.me/963997551538" target="_blank">عيد رفاعية</a>
+            </div>
+            <div>
+                اضغط على اسمي للتواصل معي مباشرة
+            </div>
+        </div>
+    </div>
+</body>
+</html>
