@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل أجهزة الجيم</title>
     
-    <!-- أيقونة الصفحة (Favicon) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+    <!-- أيقونات الصفحة -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23E4811E'/%3E%3Cstop offset='100%25' style='stop-color:%23E1AB2A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial Black,sans-serif' font-size='55' font-weight='900' text-anchor='middle' fill='%23202020'%3E🏋%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23E4811E'/%3E%3Cstop offset='100%25' style='stop-color:%23E1AB2A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='Arial Black,sans-serif' font-size='55' font-weight='900' text-anchor='middle' fill='%23202020'%3E🏋%3C/text%3E%3C/svg%3E">
     
-    <!-- أيقونة خاصة بأجهزة أبل عند الحفظ للشاشة الرئيسية -->
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
-    
-    <!-- جعل الصفحة قابلة للتثبيت كتطبيق -->
+    <!-- دعم PWA للتثبيت على الشاشة الرئيسية -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItiv2KfZhNmF2YTZgSDYp9mE2KzZhdmF2K8iLAogICJzaG9ydF9uYW1lIjogItiv2KfZhNmF2YTYgSIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiI2ZmZmZmZiIsCiAgInRoZW1lX2NvbG9yIjogIiNFNDgxMUUiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz48dGV4dCB5PScuOWVtJyBmb250LXNpemU9JzkwJz7wn4+777iPPC90ZXh0Pjwvc3ZnPiIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0KICBdCn0=">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogItiv2KfZhNmF2YTZgSDYp9mE2KzZhdmF2K8iLAogICJzaG9ydF9uYW1lIjogItiv2KfZhNmF2YTYgSIsCiAgInN0YXJ0X3VybCI6ICIuLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzIwMjAyMCIsCiAgInRoZW1lX2NvbG9yIjogIiMyMDIwMjAiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDEwMCAxMDAnJTNFJTNDZGVmcyUzRSUzQ2xpbmVhckdyYWRpZW50IGlkPSdnJyB4MT0nMCUnIHkxPScwJScgeDI9JzEwMCUnIHkyPScxMDAlJyUzRSUzQ3N0b3Agb2Zmc2V0PScwJScgc3R5bGU9J3N0b3AtY29sb3I6JTIzRTQ4MTFFJy8lM0UlM0NzdG9wIG9mZnNldD0nMTAwJScgc3R5bGU9J3N0b3AtY29sb3I6JTIzRTFBQjJBJy8lM0UlM0MvbGluZWFyR3JhZGllbnQlM0UlM0MvZGVmcyUzRSUzQ3JlY3Qgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnIHJ4PScyMCcgZmlsbD0ndXJsKCNnKScvJTNFJTNDdGV4dCB4PSc1MCcgeT0nNjgnIGZvbnQtZmFtaWx5PSdBcmlhbCBCbGFjayxzYW5zLXNlcmlmJyBmb250LXNpemU9JzU1JyBmb250LXdlaWdodD0nOTAwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPSclMjMyMDIwMjAnJTNF8J+PizwvdGV4dCUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiCiAgICB9CiAgXQp9">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #E4811E;
@@ -48,7 +47,7 @@
             width: 100%;
             max-width: 100%;
             background: var(--bg);
-            padding: 1.5rem 1rem;
+            padding: 1.5rem 1rem 0.5rem;
         }
 
         .header {
@@ -63,18 +62,18 @@
 
         .header h1 {
             font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 2rem;
             color: var(--primary);
             letter-spacing: 0.5px;
         }
 
         .header .eng-title {
-            font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
-            font-weight: 500;
-            font-size: 1.3rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 2.2rem;
             color: var(--accent);
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .hadith {
@@ -82,43 +81,27 @@
             font-size: 0.85rem;
             color: var(--text);
             opacity: 0.8;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             padding-bottom: 0.8rem;
             border-bottom: 1px dashed var(--accent);
         }
 
-        .guide-note {
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            font-size: 0.8rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            color: var(--text);
-            gap: 0.5rem;
-        }
-
-        .print-btn {
-            font-family: 'Noto Kufi Arabic', sans-serif;
-            font-weight: 600;
-            font-size: 0.8rem;
-            color: var(--bg);
-            background: var(--primary);
-            border: none;
-            padding: 0.4rem 1rem;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            white-space: nowrap;
-        }
-
-        .print-btn:hover {
-            opacity: 0.85;
+        .interactive-note {
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding: 0.6rem;
+            background: #fff8f0;
         }
 
         .table-wrapper {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
+            max-height: 70vh;
+            overflow-y: auto;
+            position: relative;
         }
 
         table {
@@ -129,14 +112,22 @@
             min-width: 800px;
         }
 
+        thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
         th {
             font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
             font-weight: 600;
-            padding: 0.7rem 0.4rem;
+            padding: 0.9rem 0.5rem;
             text-align: center;
-            border-bottom: 2px solid var(--text);
-            color: var(--primary);
-            font-size: 0.8rem;
+            border: none;
+            color: #FFFFFF;
+            font-size: 0.85rem;
+            background: #202020;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         td {
@@ -145,6 +136,7 @@
             border-bottom: 1px solid #ddd;
             font-weight: 400;
             color: var(--text);
+            background: var(--bg);
         }
 
         tr:hover td {
@@ -161,29 +153,17 @@
             opacity: 0.7;
         }
 
-        .machine-link {
-            color: var(--primary);
-        }
-
-        .muscle-link {
-            color: var(--accent);
-        }
-
-        .video-link {
-            color: var(--primary);
-        }
-
-        .alt-link {
-            color: var(--accent);
-        }
-
+        .machine-link { color: var(--primary); }
+        .muscle-link { color: var(--accent); }
+        .video-link { color: var(--primary); }
+        .alt-link { color: var(--accent); }
         .eng-text {
             font-family: 'Oswald', 'Noto Kufi Arabic', sans-serif;
             font-weight: 500;
         }
 
         .footer {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             padding-top: 1rem;
             border-top: 2px solid var(--primary);
             display: flex;
@@ -202,14 +182,21 @@
         @media print {
             body { background: white; padding: 0; }
             .container { max-width: 100%; padding: 0.4cm; }
-            .print-btn, .guide-note { display: none !important; }
+            .interactive-note { display: none !important; }
+            thead { position: static; }
+            th { 
+                box-shadow: none; 
+                background: #000 !important;
+                color: #fff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
             a { color: inherit; }
             .machine-link, .muscle-link, .video-link, .alt-link { color: inherit; }
-            th { color: black; border-bottom: 2px solid black; }
-            td { border-bottom: 1px solid black; color: black; }
-            .eng-text { color: black; }
-            .header { border-bottom: 2px solid black; }
-            .footer { border-top: 2px solid black; }
+            td { border-bottom: 1px solid #000; color: #000; }
+            .eng-text { color: #000; }
+            .header { border-bottom: 2px solid #000; }
+            .footer { border-top: 2px solid #000; }
         }
     </style>
 </head>
@@ -223,11 +210,8 @@
             قال رسول الله ﷺ: "المؤمن القوي خير وأحب إلى الله من المؤمن الضعيف"
         </div>
 
-        <div class="guide-note">
-            <span>📷 اسم الآلة = صورة</span>
-            <span>▶️ فيديو يوتيوب</span>
-            <span>🧠 العضلة = شكلها</span>
-            <button class="print-btn" onclick="window.print()">🖨️ طباعة</button>
+        <div class="interactive-note">
+            ⚡ هذا الملف تفاعلي بالكامل — اضغط على أي خيار لمشاهدة الشرح بالصور أو الفيديو
         </div>
 
         <div class="table-wrapper">
@@ -247,7 +231,7 @@
                         <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Lat+Pulldown+machine" target="_blank">جهاز سحب عالي / Lat Pulldown</a></td>
                         <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=latissimus+dorsi+muscle+anatomy" target="_blank">الظهر العريض / Lats</a></td>
                         <td><a class="video-link" href="https://www.youtube.com/results?search_query=Lat+Pulldown+form+shorts" target="_blank">Lat Pulldown</a></td>
-                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Pull+ups+shorts" target="_blank">Pull-ups</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Pull+ups+shorts" target="_blank">Pull-ups (عقلة)</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -303,7 +287,7 @@
                         <td><a class="machine-link" href="https://www.google.com/search?tbm=isch&q=Flat+Bench+Press" target="_blank">بنش مستوي / Flat Bench</a></td>
                         <td><a class="muscle-link" href="https://www.google.com/search?tbm=isch&q=pectoralis+major+muscle+anatomy" target="_blank">الصدر / Chest</a></td>
                         <td><a class="video-link" href="https://www.youtube.com/results?search_query=Barbell+Bench+Press+shorts" target="_blank">Barbell Bench</a></td>
-                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Push+ups+shorts" target="_blank">Push-ups</a></td>
+                        <td><a class="alt-link" href="https://www.youtube.com/results?search_query=Push+ups+shorts" target="_blank">Push-ups (ضغط)</a></td>
                     </tr>
                     <tr>
                         <td>10</td>
